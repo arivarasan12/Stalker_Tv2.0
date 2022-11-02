@@ -6,9 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <link rel="shortcut icon" type="image/x-icon" href="logo.jpg">
 <script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="https://cdn.plyr.io/2.0.18/plyr.js"></script>
-<link rel="stylesheet" href="https://cdn.plyr.io/2.0.18/plyr.css">
+<script src="http://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="http://cdn.plyr.io/2.0.18/plyr.js"></script>
+<link rel="stylesheet" href="http://cdn.plyr.io/2.0.18/plyr.css">
 <style>
 html {
   font-family: Poppins;
