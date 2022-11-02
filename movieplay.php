@@ -146,8 +146,8 @@ function videovisible() {
 
 
 var url="<?php
-// $tem=$_REQUEST["c"];
-$tem='/media/36033.mpg';
+$tem=$_REQUEST["c"];
+// $tem='/media/36033.mpg';
 $int_var = (int)filter_var($tem, FILTER_SANITIZE_NUMBER_INT);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'http://live.new4k.tv/stalker_portal/server/load.php?type=stb&action=handshake&token=&JsHttpRequest=1-xml');
@@ -160,7 +160,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Accept: /',
     'Host: live.new4k.tv',
     'Connection: Keep-Alive'));
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
 
 $response = curl_exec($ch);
 // echo $response;
@@ -184,10 +184,10 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Host: live.new4k.tv',
     'Connection: Keep-Alive',
 ]);
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
 
 $response = curl_exec($ch);
-
+// echo $response;
 curl_close($ch);
 
 
@@ -208,11 +208,11 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Host:  live.new4k.tv',
     'Connection:  Keep-Alive',
     
-    // 'Cookie: mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT'
+    // 'Cookie: mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT'
 ));
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
 $response = curl_exec($ch);
 // echo $response;
 $decoded_json = json_decode($response,true);
@@ -223,40 +223,40 @@ $json = json_encode($id);
 $decoded_json = json_decode($json, true);
 $id=$decoded_json['id'];
 $videoi=$decoded_json['video_id'];
-$isseason=$decoded_json['is_season'];
-$isseasonid= json_encode($isseason);
+// $isseason=$decoded_json['is_season'];
+// $isseasonid= json_encode($isseason);
 $videoid= json_encode($videoi);
 $json= json_encode($id);
 $json= trim($json, '"');
 curl_close($ch);
-if(strcmp($isseasonid,'true')==0){
+// if(strcmp($isseasonid,'true')==0){
     
 
-    $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,'http://live.new4k.tv/stalker_portal/server/load.php?type=vod&action=get_ordered_list&category=&movie_id='.$videoid.'&season_id='.$json.'&episode_id=0&p=1&sortby=added');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'User-Agent: Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 250 Safari/533.3',
-    'X-User-Agent:  Model: MAG250; Link: WiFi',
-    'Referer:  http://live.new4k.tv/stalker_portal/c/',
-    'Authorization: Bearer '.$token,
-    'Accept:  /',
-    'Host:  live.new4k.tv',
-    'Connection:  Keep-Alive',
+//     $ch = curl_init();
+// curl_setopt($ch, CURLOPT_URL,'http://live.new4k.tv/stalker_portal/server/load.php?type=vod&action=get_ordered_list&category=&movie_id='.$videoid.'&season_id='.$json.'&episode_id=0&p=1&sortby=added');
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+// curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+//     'User-Agent: Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 250 Safari/533.3',
+//     'X-User-Agent:  Model: MAG250; Link: WiFi',
+//     'Referer:  http://live.new4k.tv/stalker_portal/c/',
+//     'Authorization: Bearer '.$token,
+//     'Accept:  /',
+//     'Host:  live.new4k.tv',
+//     'Connection:  Keep-Alive',
     
-    // 'Cookie: mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT'
-));
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT');
-$response = curl_exec($ch);
-// echo $response;
-$decoded_json = json_decode($response, true);
-}
+//     // 'Cookie: mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT'
+// ));
+// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
+// $response = curl_exec($ch);
+// // echo $response;
+// $decoded_json = json_decode($response, true);
+// }
 
-else
-{
+// else
+// {
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,'http://live.new4k.tv/stalker_portal/server/load.php?type=vod&action=create_link&cmd=%2Fmedia%2Ffile_'.$json.'.mpg&series=&forced_storage=&disable_ad=0&download=0&force_ch_link_check=0&JsHttpRequest=1-xml');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -270,11 +270,11 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Host:  live.new4k.tv',
     'Connection:  Keep-Alive',
     
-    // 'Cookie: mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT'
+    // 'Cookie: mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT'
 ));
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1a:79:d6:82:fc; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
 $response = curl_exec($ch);
 // echo $response;
 $decoded_json = json_decode($response, true);
@@ -282,11 +282,11 @@ $customers = $decoded_json['js'];
 $channelurl= $customers['cmd'];
 
 $channelurl1=str_replace("http://edge237.maddogs.fun:80","http://185.59.223.242",$channelurl);
-$channelurl1=str_replace("http://edge.metaa.tv","http://185.59.223.242",$channelur1);
+$channelurl1=str_replace("http://edge.metaa.tv","http://185.59.223.242",$channelurl1);
 
 echo $channelurl1;
 curl_close($ch);
-}
+// }
 ?>";
 plyr.setup(video);
 
