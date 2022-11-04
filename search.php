@@ -21,18 +21,18 @@ $tem1=str_replace("%20","%",$tem);
 $tem=$tem1;
 // $tem="pandian%20stores";
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://live.new4k.tv/stalker_portal/server/load.php?type=stb&action=handshake&token=&JsHttpRequest=1-xml');
+curl_setopt($ch, CURLOPT_URL, 'http://eurostar.mix.tm/stalker_portal/server/load.php?type=stb&action=handshake&token=&JsHttpRequest=1-xml');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'User-Agent: Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 250 Safari/533.3',
     'X-User-Agent: Model: MAG250; Link: WiFi',
-    'Referer: http://live.new4k.tv/stalker_portal/c/',
+    'Referer: http://eurostar.mix.tm/stalker_portal/c/',
     'Accept: /',
-    'Host: live.new4k.tv',
+    'Host: eurostar.mix.tm',
     'Connection: Keep-Alive'
 ));
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=10:27:BE:5B:64:8B; stb_lang=en; timezone=GMT');
 
 $response = curl_exec($ch);
 
@@ -44,45 +44,45 @@ $randome = $customers['random'];
 curl_close($ch);
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://live.new4k.tv/stalker_portal/server/load.php?type=stb&action=get_profile&hd=1&ver=ImageDescription:%200.2.18-r14-pub-250;%20ImageDate:%20Fri%20Jan%2015%2015:20:44%20EET%202016;%20PORTAL%20version:%205.5.0;%20API%20Version:%20JS%20API%20version:%20328;%20STB%20API%20version:%20134;%20Player%20Engine%20version:%200x566&num_banks=2&sn=EA32DC71A0D9A&client_type=STB&image_version=218&video_out=hdmi&auth_second_step=1&hw_version=1.7-BD-00&not_valid_token=0&metrics=%7B\'mac\':\'00:1A:79:E2:19:11\',\'sn\':\'EA32DC71A0D9A\',\'type\':\'STB\',\'model\':\'MAG254\',\'uid\':\'ED6FF337FC14882EA2FE4CC668CE71DC453C485FAE065DE79DEBFF2066B0911E\',\'random\':\'bada5add10903e4463f7a35a8ec3f32ca143b54b\'%7D&hw_version_2=41493E46C7546D79CEBFEAC403818B05F6D496B8&api_signature=261&JsHttpRequest=1-xml&device_id=ED6FF337FC14882EA2FE4CC668CE71DC453C485FAE065DE79DEBFF2066B0911E&device_id2=ED6FF337FC14882EA2FE4CC668CE71DC453C485FAE065DE79DEBFF2066B0911E&JsHttpRequest=1-xml');
+curl_setopt($ch, CURLOPT_URL, 'http://eurostar.mix.tm/stalker_portal/server/load.php?type=stb&action=get_profile&hd=1&ver=ImageDescription%3A%200.2.18-r14-pub-250%3B%20ImageDate%3A%20Fri%20Jan%2015%2015%3A20%3A44%20EET%202016%3B%20PORTAL%20version%3A%205.1.0%3B%20API%20Version%3A%20JS%20API%20version%3A%20328%3B%20STB%20API%20version%3A%20134%3B%20Player%20Engine%20version%3A%200x566&num_banks=2&sn=EB46E386EEE26&stb_type=MAG250&image_version=218&video_out=hdmi&device_id=03423FA509B0202EA37568438EC2F8AF2C63A955F9CDBC483ACBBDE1037C94DC&device_id2=03423FA509B0202EA37568438EC2F8AF2C63A955F9CDBC483ACBBDE1037C94DC&signature=&auth_second_step=1&hw_version=1.7-BD-00&not_valid_token=0&client_type=STB&hw_version_2=eb46e386eee26a40e033c245a03c5cde&timestamp=1667540604&api_signature=263&metrics=%7B%22mac%22%3A%2210%3A27%3ABE%3A5B%3A64%3A8B%22%2C%22sn%22%3A%22EB46E386EEE26%22%2C%22model%22%3A%22MAG250%22%2C%22type%22%3A%22STB%22%2C%22uid%22%3A%22%22%2C%22random%22%3A%2211f4dd1d5b4c7b21618c8d92cc414247%22%7D&JsHttpRequest=1-xml');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'User-Agent: Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 250 Safari/533.3',
     'X-User-Agent: Model: MAG250; Link: WiFi',
-    'Referer: http://live.new4k.tv/stalker_portal/c/',
+    'Referer: http://eurostar.mix.tm/stalker_portal/c/',
     'Authorization: Bearer ' . $token,
     'Accept: /',
-    'Host: live.new4k.tv',
+    'Host: eurostar.mix.tm',
     'Connection: Keep-Alive',
 ]);
-curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
+curl_setopt($ch, CURLOPT_COOKIE, 'mac=10:27:BE:5B:64:8B; stb_lang=en; timezone=GMT');
 $response = curl_exec($ch);
 // echo $response;
 $pageno = 0;
 $maxpageno = 1;
 curl_close($ch);
 
-while ($pageno <= $maxpageno && $pageno < 2) {
+while ($pageno <= $maxpageno && $pageno < 10) {
 
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'http://live.new4k.tv:/stalker_portal/server/load.php?type=vod&action=get_ordered_list&p=' . $pageno . '&search=' . $tem . '&sortby=added');
+    curl_setopt($ch, CURLOPT_URL, 'http://eurostar.mix.tm:/stalker_portal/server/load.php?type=vod&action=get_ordered_list&p=' . $pageno . '&search=' . $tem . '&sortby=added');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'User-Agent: Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 250 Safari/533.3',
         'X-User-Agent:  Model: MAG250; Link: WiFi',
-        'Referer:  http://live.new4k.tv/stalker_portal/c/',
+        'Referer:  http://eurostar.mix.tm/stalker_portal/c/',
         'Authorization: Bearer ' . $token,
         'Accept:  /',
-        'Host:  live.new4k.tv',
+        'Host:  eurostar.mix.tm',
         'Connection:  Keep-Alive',
 
-        // 'Cookie: mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT'
+        // 'Cookie: mac=10:27:BE:5B:64:8B; stb_lang=en; timezone=GMT'
     ));
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_COOKIE, 'mac=00:1A:79:E2:19:11; stb_lang=en; timezone=GMT');
+    curl_setopt($ch, CURLOPT_COOKIE, 'mac=10:27:BE:5B:64:8B; stb_lang=en; timezone=GMT');
 
     $response = curl_exec($ch);
     $resp= $response;
@@ -135,7 +135,7 @@ while ($pageno <= $maxpageno && $pageno < 2) {
         echo $name;
         echo '" class="card">';
         echo '<img class="lazyload" data-src="';
-        echo 'http://live.new4k.tv';
+        echo 'http://eurostar.mix.tm';
         $screenshot_uri=json_encode($screenshot_uri);
         echo trim(str_replace('\/','/',$screenshot_uri),'"');
         echo '" onerror=this.src="http://static2.tgstat.ru/channels/_0/8b/8b2b3c0f2516974f647268e9b5337c60.jpg" style="height: 200px">';
